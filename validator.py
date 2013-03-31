@@ -14,14 +14,14 @@
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
 #
-#Usage: python2 validator.py infile.bam outfile.csv
+#Usage: python2 validator.py infile.bam min_depth(int)
 
 import pysam
 import re
 from sys import argv
 
 infile = pysam.Samfile(argv[1], "rb" )
-min_depth = 10
+min_depth = int(argv[2])
 Valid_snps = 0
 Invalid_snps = 0
 Invalidable_snps = 0
