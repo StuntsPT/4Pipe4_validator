@@ -16,6 +16,10 @@
 #
 #Usage: python2 comparer.py infile.bam
 
+'''This program will compare the SNPs in 4Pipe4 contigs against a reference.
+It will output the locations of the SNPs the match the "#" tag with the position
+of the difference from the reference it was aligned against.'''
+
 import pysam
 import re
 from sys import argv
