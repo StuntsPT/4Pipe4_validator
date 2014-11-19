@@ -3,7 +3,7 @@
 ##This program will validate the results of the 4Pipe4 analysis pipeline.
 
 ##Requirements:
-python 2.x (only tested with 2.7) and pysam (http://code.google.com/p/pysam/)
+python 2.x (only tested with 2.7) and pysam (https://github.com/pysam-developers/pysam)
 
 ##Usage:
     python2 validator.py infile.bam min_depth(int)
