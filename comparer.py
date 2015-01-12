@@ -18,9 +18,7 @@
 
 '''This program will compare the SNPs in 4Pipe4 contigs against a reference.
 It will output the locations of the SNPs the match the "#" tag with the position
-of the difference from the reference it was aligned against.
-This script is not perfect as some SNPs are getting an offset of +/- 1 base. I 
-don't know why this happens yet...'''
+of the difference from the reference it was aligned against.'''
 
 import pysam
 import re
