@@ -61,14 +61,13 @@ def main(comparer1, comparer2, ref1, ref2):
     ref2_raw = ref_parser(ref2)
 
     snpset = set()
-    for k, v in snps.items():
-        for s in v:
-            if s in ref1_raw or s in ref2_raw:
-                snpset.add(k)
+    for key, value in snps.items():
+        for coord in value:
+            if coord in ref1_raw or coord in ref2_raw:
+                snpset.add(key)
 
     return len(snpset)
 
-# Fazer set de SNPs se as coordenadas dos comparers baterem com as refs!!!
 
 if __name__ == "__main__":
     # Usage: python3 counter.py comparer1.txt compaer2.txt ref_1.txt ref_2.txt
