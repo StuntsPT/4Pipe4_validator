@@ -46,8 +46,7 @@ def ref_parser(ref_file):
     """
     with open(ref_file, 'r') as infile:
         refs = infile.readlines()
-        rfs = [x.rstrip() for x in refs]
-
+        rfs = [" ".join(x.split()[0:2]) for x in refs]
     return rfs
 
 def main(comparer1, comparer2, ref1, ref2):
