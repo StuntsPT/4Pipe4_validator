@@ -35,7 +35,7 @@ def fasta_parser(fasta_file):
                 data = lines.split("|")
                 left_contig_length = int(re.sub(".*_", "", data[6]))
                 orig_snp_pos = int(re.search(":\d*?_", data[1]).group()[1:-1])
-                new_snp_pos = str(left_contig_length + orig_snp_pos)
+                new_snp_pos = str(left_contig_length + orig_snp_pos + 1)
                 snp_bases = re.search("./.$", data[1]).group().replace("/","")
                 new_name = data[0] + "#" + new_snp_pos + snp_bases
                 print(new_name)
